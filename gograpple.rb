@@ -5,16 +5,16 @@
 class Gograpple < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/gograpple"
-  version "0.0.10"
+  version "0.0.11"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/foomo/gograpple/releases/download/v0.0.10/gograpple_0.0.10_darwin_amd64.tar.gz"
-    sha256 "4db25ce80de2816f54310836bd19c05f60f3acb85a4e3f4283a7ec6ba011a653"
+    url "https://github.com/foomo/gograpple/releases/download/v0.0.11/gograpple_0.0.11_darwin_amd64.tar.gz"
+    sha256 "7f0db223e6976b8fc5e0b34cbe4434d856deb628d8e97180bfea4c3858b836fc"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/foomo/gograpple/releases/download/v0.0.10/gograpple_0.0.10_linux_amd64.tar.gz"
-    sha256 "b146d5ae5510e07f7ab1692ab5dce551f19c2adb8585a67951397e103b00c504"
+    url "https://github.com/foomo/gograpple/releases/download/v0.0.11/gograpple_0.0.11_linux_amd64.tar.gz"
+    sha256 "dbeb289eb0878cc1d802cf1a122a8a60894b480d00b47f95eaa1acb546aca0a2"
   end
 
   def install
