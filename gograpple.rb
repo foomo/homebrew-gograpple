@@ -5,20 +5,20 @@
 class Gograpple < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/gograpple"
-  version "0.0.18"
+  version "0.0.19-beta.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.18/gograpple_0.0.18_darwin_arm64.tar.gz"
-      sha256 "18700aed0bbf4a69fde499b7ac2fd3ecf6b8f8c827072de3782de79a3805a92e"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.19-beta.3/gograpple_0.0.19-beta.3_darwin_arm64.tar.gz"
+      sha256 "2b00477c6823db2efd9ca539a857fee82bfc40d6824fb21976fa32a94311abe2"
 
       def install
         bin.install "gograpple"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.18/gograpple_0.0.18_darwin_amd64.tar.gz"
-      sha256 "54e454fbfe5b9f2988f086e22ed076026c421eb4d3b5175ae047595648f38602"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.19-beta.3/gograpple_0.0.19-beta.3_darwin_amd64.tar.gz"
+      sha256 "2c8c14693f67b227a9f4a7f1ddcc94671ebaf6201120b44685cd8652f2212496"
 
       def install
         bin.install "gograpple"
@@ -28,16 +28,16 @@ class Gograpple < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.18/gograpple_0.0.18_linux_amd64.tar.gz"
-      sha256 "0d33f9c18b1c81a3393cd160316f6e17563fc415dc5996d0429ac23e33b33cbd"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.19-beta.3/gograpple_0.0.19-beta.3_linux_amd64.tar.gz"
+      sha256 "64a40785240415e8ab6a80e2f20976b68434fc1152a08dd7472af66034f64c73"
 
       def install
         bin.install "gograpple"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.18/gograpple_0.0.18_linux_arm64.tar.gz"
-      sha256 "d42ec50530cba65c326d388977e47541327c84a7377f908f4f51085188e34b1a"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.19-beta.3/gograpple_0.0.19-beta.3_linux_arm64.tar.gz"
+      sha256 "584d5d030d7f0762e6b793d8449c59006fa78fb3f9df0ceb23ed959344211d6f"
 
       def install
         bin.install "gograpple"
