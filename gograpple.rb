@@ -5,20 +5,20 @@
 class Gograpple < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/gograpple"
-  version "0.0.20-beta"
+  version "0.0.20-beta.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta/gograpple_0.0.20-beta_darwin_arm64.tar.gz"
-      sha256 "f11fe536d9dd58f3a51dfb8df2ba72a3df676ff0189e155168eae548271e627c"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_darwin_arm64.tar.gz"
+      sha256 "c5c4a3357a20b6803276e3288e782f666d5c2de74cff25d3673d8c0e42c1ff4c"
 
       def install
         bin.install "gograpple"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta/gograpple_0.0.20-beta_darwin_amd64.tar.gz"
-      sha256 "a5752329b21a6a041a392ff227df17905f6d39b00f6ec3020af02eae0b1c48a9"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_darwin_amd64.tar.gz"
+      sha256 "e34eb9c6e706cb513dab3d448e2678d636b1548cbecab93888a7f9bd14dc65af"
 
       def install
         bin.install "gograpple"
@@ -28,16 +28,16 @@ class Gograpple < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta/gograpple_0.0.20-beta_linux_amd64.tar.gz"
-      sha256 "9ee48093ec1be1345d475083228e1de1521b3503f331f43d516a41dc90200d2b"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_linux_amd64.tar.gz"
+      sha256 "f815fecf912f2fd77772b80165925291826a4d02280e8136f7a61b15a5bc6578"
 
       def install
         bin.install "gograpple"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta/gograpple_0.0.20-beta_linux_arm64.tar.gz"
-      sha256 "43f0b1595c2359c5c35f9de0d470dd81987a083e48f4da26a45b839275772ec5"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_linux_arm64.tar.gz"
+      sha256 "af609f7db282a502485c307f679cc533dff8cd8e3944835749a18d8095b23c92"
 
       def install
         bin.install "gograpple"
