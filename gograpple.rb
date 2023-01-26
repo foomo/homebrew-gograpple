@@ -5,20 +5,20 @@
 class Gograpple < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/gograpple"
-  version "0.0.20-beta.1"
+  version "0.0.21"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_darwin_arm64.tar.gz"
-      sha256 "c5c4a3357a20b6803276e3288e782f666d5c2de74cff25d3673d8c0e42c1ff4c"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.21/gograpple_0.0.21_darwin_arm64.tar.gz"
+      sha256 "6c89ca0b1b646839e6aa55856ff46f781696eb3b66e332af183849fb72128c77"
 
       def install
         bin.install "gograpple"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_darwin_amd64.tar.gz"
-      sha256 "e34eb9c6e706cb513dab3d448e2678d636b1548cbecab93888a7f9bd14dc65af"
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.21/gograpple_0.0.21_darwin_amd64.tar.gz"
+      sha256 "0ff30d837d3745a6f2edcee386a50010102592146341002721dc88394ff61af8"
 
       def install
         bin.install "gograpple"
@@ -27,17 +27,17 @@ class Gograpple < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_linux_amd64.tar.gz"
-      sha256 "f815fecf912f2fd77772b80165925291826a4d02280e8136f7a61b15a5bc6578"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.21/gograpple_0.0.21_linux_arm64.tar.gz"
+      sha256 "8f4c5a375129f6460c07f92f9fb7a29f929124ec2f117276e0cdb8ee540ac105"
 
       def install
         bin.install "gograpple"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gograpple/releases/download/v0.0.20-beta.1/gograpple_0.0.20-beta.1_linux_arm64.tar.gz"
-      sha256 "af609f7db282a502485c307f679cc533dff8cd8e3944835749a18d8095b23c92"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/gograpple/releases/download/v0.0.21/gograpple_0.0.21_linux_amd64.tar.gz"
+      sha256 "58a412e65152c9e896eb476b2a5ffe01f3215df0d0bb17c1e918cb64afaceed4"
 
       def install
         bin.install "gograpple"
@@ -45,8 +45,9 @@ class Gograpple < Formula
     end
   end
 
-  def caveats; <<~EOS
-    gograpple -h
-  EOS
+  def caveats
+    <<~EOS
+      gograpple -h
+    EOS
   end
 end
